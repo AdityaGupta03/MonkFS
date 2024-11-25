@@ -1,0 +1,32 @@
+CompileFlags:
+  Add:
+    - "-std=c++11"  # Matching your CMake C++11 setting
+    - "-Wall"
+    - "-Wextra"
+    - "-I${workspaceFolder}"
+    - "-I${workspaceFolder}/MonkFS/network/include"
+    - "-I${workspaceFolder}/MonkFS/storage/include"
+
+Diagnostics:
+  ClangTidy:
+    Add:
+      - modernize*
+      - performance*
+      - bugprone*
+      - readability*
+    Remove:
+      - modernize-use-trailing-return-type
+
+Index:
+  Background: Build
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+
+Hover:
+  ShowAKA: Yes
+
+Style:
+  FullyQualifiedNamespaces: No

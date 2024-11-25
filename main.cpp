@@ -1,6 +1,8 @@
-#include <iostream>
+#include "network/include/TCPTransport.h"
 
 int main() {
-  // Hello world test setup
-  std::cout << "Hello World!" << std::endl;
+  network::TCPTransport tcp_transport(network::TCPTransportOpts{
+    .listen_addr = ""
+  });
+  tcp_transport.listenAndAccept();
 }
