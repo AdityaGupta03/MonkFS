@@ -1,5 +1,4 @@
-#ifndef PEER_H
-#define PEER_H
+#pragma once
 
 #include <string>
 
@@ -8,5 +7,3 @@ namespace network {
 class Peer {};
 
 }
-
-#endif // PEER_H

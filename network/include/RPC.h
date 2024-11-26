@@ -1,5 +1,4 @@
-#ifndef RPC_H
-#define RPC_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -16,5 +15,3 @@ struct RPC {
 };
 
 } // namespace network
-
-#endif // RPC_H

@@ -1,5 +1,4 @@
-#ifndef TCPTRANSPORT_H
-#define TCPTRANSPORT_H
+#pragma once
 
 #include "Peer.h"
 #include "Transport.h"
@@ -23,7 +22,7 @@ struct TCPTransportOpts {
 class TCPTransport : public Transport {
 public:
   TCPTransport(TCPTransportOpts opts);
-  ~TCPTransport();
+  ~TCPTransport() override;
 
   std::string addr() const override;
   bool dial(const std::string& addr) override;
@@ -45,5 +44,3 @@ private:
 };
 
 }
-
-#endif // TCPTRANSPORT_H
